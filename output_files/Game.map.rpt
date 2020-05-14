@@ -1,0 +1,525 @@
+Analysis & Synthesis report for Game
+Thu May 14 03:21:29 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: vga_controller:U2
+ 14. Parameter Settings for User Entity Instance: hw_image_generator:U3
+ 15. Port Connectivity Checks: "Gen25MHz:U1"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 14 03:21:29 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Game                                        ;
+; Top-level Entity Name              ; Game                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 2,705                                       ;
+;     Total combinational functions  ; 2,686                                       ;
+;     Dedicated logic registers      ; 173                                         ;
+; Total registers                    ; 173                                         ;
+; Total pins                         ; 22                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Game               ; Game               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
+; Gen25Mhz.vhd                     ; yes             ; User VHDL File  ; D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd           ;         ;
+; hw_image_generator.vhd           ; yes             ; User VHDL File  ; D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd ;         ;
+; vga_controller.vhd               ; yes             ; User VHDL File  ; D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd     ;         ;
+; Game.vhd                         ; yes             ; User VHDL File  ; D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd               ;         ;
+; RelojLento.vhd                   ; yes             ; User VHDL File  ; D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/RelojLento.vhd         ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 2,705             ;
+;                                             ;                   ;
+; Total combinational functions               ; 2686              ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 575               ;
+;     -- 3 input functions                    ; 565               ;
+;     -- <=2 input functions                  ; 1546              ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 859               ;
+;     -- arithmetic mode                      ; 1827              ;
+;                                             ;                   ;
+; Total registers                             ; 173               ;
+;     -- Dedicated logic registers            ; 173               ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 22                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; RelojLento:U4|led ;
+; Maximum fan-out                             ; 105               ;
+; Total fan-out                               ; 7517              ;
+; Average fan-out                             ; 2.59              ;
++---------------------------------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name         ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
+; |Game                      ; 2686 (0)            ; 173 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |Game                       ; Game               ; work         ;
+;    |Gen25MHz:U1|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|Gen25MHz:U1           ; Gen25MHz           ; work         ;
+;    |RelojLento:U4|         ; 49 (49)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|RelojLento:U4         ; RelojLento         ; work         ;
+;    |hw_image_generator:U3| ; 2579 (2579)         ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|hw_image_generator:U3 ; hw_image_generator ; work         ;
+;    |vga_controller:U2|     ; 57 (57)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|vga_controller:U2     ; vga_controller     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++-----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------+------------------------+
+; hw_image_generator:U3|red[0]                        ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|red[1]                        ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|red[2]                        ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|red[3]                        ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|green[0]                      ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|green[1]                      ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|green[2]                      ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|green[3]                      ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|blue[0]                       ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|blue[1]                       ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|blue[2]                       ; vga_controller:U2|disp_ena ; yes                    ;
+; hw_image_generator:U3|blue[3]                       ; vga_controller:U2|disp_ena ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                            ;                        ;
++-----------------------------------------------------+----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++-----------------------------------------+-----------------------------------------+
+; Register name                           ; Reason for Removal                      ;
++-----------------------------------------+-----------------------------------------+
+; hw_image_generator:U3|s[0]              ; Stuck at GND due to stuck port data_in  ;
+; vga_controller:U2|column[10..30]        ; Stuck at GND due to stuck port data_in  ;
+; vga_controller:U2|row[10..30]           ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|x[0..3]           ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|x[4,5]            ; Stuck at VCC due to stuck port data_in  ;
+; hw_image_generator:U3|x[6..8]           ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|x[9]              ; Stuck at VCC due to stuck port data_in  ;
+; hw_image_generator:U3|x[10..31]         ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|s[8,9,11..31]     ; Merged with hw_image_generator:U3|s[10] ;
+; hw_image_generator:U3|s[6]              ; Merged with hw_image_generator:U3|s[3]  ;
+; hw_image_generator:U3|w[1]              ; Merged with hw_image_generator:U3|w[0]  ;
+; hw_image_generator:U3|w[0]              ; Stuck at GND due to stuck port data_in  ;
+; vga_controller:U2|row[9]                ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|s[4]              ; Merged with hw_image_generator:U3|s[3]  ;
+; vga_controller:U2|column[31]            ; Stuck at GND due to stuck port data_in  ;
+; vga_controller:U2|row[31]               ; Stuck at GND due to stuck port data_in  ;
+; Total Number of Removed Registers = 105 ;                                         ;
++-----------------------------------------+-----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 173   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 55    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; hw_image_generator:U3|y[8]              ; 11      ;
+; hw_image_generator:U3|y[5]              ; 13      ;
+; hw_image_generator:U3|y[2]              ; 13      ;
+; hw_image_generator:U3|y[1]              ; 13      ;
+; hw_image_generator:U3|y[0]              ; 13      ;
+; hw_image_generator:U3|z[0]              ; 43      ;
+; hw_image_generator:U3|z[31]             ; 41      ;
+; hw_image_generator:U3|s[10]             ; 5       ;
+; hw_image_generator:U3|s[7]              ; 5       ;
+; hw_image_generator:U3|s[3]              ; 10      ;
+; hw_image_generator:U3|s[5]              ; 2       ;
+; hw_image_generator:U3|s[2]              ; 4       ;
+; hw_image_generator:U3|w[10]             ; 4       ;
+; hw_image_generator:U3|w[11]             ; 4       ;
+; hw_image_generator:U3|w[12]             ; 4       ;
+; hw_image_generator:U3|w[13]             ; 4       ;
+; hw_image_generator:U3|w[14]             ; 4       ;
+; hw_image_generator:U3|w[15]             ; 4       ;
+; hw_image_generator:U3|w[16]             ; 4       ;
+; hw_image_generator:U3|w[17]             ; 4       ;
+; hw_image_generator:U3|w[18]             ; 4       ;
+; hw_image_generator:U3|w[19]             ; 4       ;
+; hw_image_generator:U3|w[20]             ; 4       ;
+; hw_image_generator:U3|w[21]             ; 4       ;
+; hw_image_generator:U3|w[22]             ; 4       ;
+; hw_image_generator:U3|w[23]             ; 4       ;
+; hw_image_generator:U3|w[24]             ; 4       ;
+; hw_image_generator:U3|w[25]             ; 4       ;
+; hw_image_generator:U3|w[30]             ; 4       ;
+; hw_image_generator:U3|w[26]             ; 4       ;
+; hw_image_generator:U3|w[27]             ; 4       ;
+; hw_image_generator:U3|w[28]             ; 4       ;
+; hw_image_generator:U3|w[29]             ; 4       ;
+; hw_image_generator:U3|w[9]              ; 7       ;
+; hw_image_generator:U3|w[8]              ; 7       ;
+; hw_image_generator:U3|w[7]              ; 8       ;
+; hw_image_generator:U3|w[6]              ; 5       ;
+; hw_image_generator:U3|w[5]              ; 6       ;
+; hw_image_generator:U3|w[3]              ; 6       ;
+; hw_image_generator:U3|w[2]              ; 6       ;
+; hw_image_generator:U3|w[31]             ; 11      ;
+; hw_image_generator:U3|ban2              ; 4       ;
+; Total number of inverted registers = 42 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |Game|hw_image_generator:U3|n[1]  ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |Game|hw_image_generator:U3|w[23] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|vga_controller:U2|v_count   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_controller:U2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; h_pulse        ; 96    ; Signed Integer                        ;
+; h_bp           ; 48    ; Signed Integer                        ;
+; h_pixels       ; 640   ; Signed Integer                        ;
+; h_fp           ; 16    ; Signed Integer                        ;
+; h_pol          ; '0'   ; Enumerated                            ;
+; v_pulse        ; 2     ; Signed Integer                        ;
+; v_bp           ; 33    ; Signed Integer                        ;
+; v_pixels       ; 480   ; Signed Integer                        ;
+; v_fp           ; 10    ; Signed Integer                        ;
+; v_pol          ; '0'   ; Enumerated                            ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: hw_image_generator:U3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; pixels_y       ; 478   ; Signed Integer                            ;
+; pixels_x       ; 600   ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Gen25MHz:U1"                                                                          ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                             ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+; vga_clk ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 173                         ;
+;     CLR               ; 23                          ;
+;     ENA               ; 36                          ;
+;     ENA CLR           ; 19                          ;
+;     plain             ; 95                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 2687                        ;
+;     arith             ; 1827                        ;
+;         2 data inputs ; 1324                        ;
+;         3 data inputs ; 503                         ;
+;     normal            ; 860                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 51                          ;
+;         2 data inputs ; 171                         ;
+;         3 data inputs ; 62                          ;
+;         4 data inputs ; 575                         ;
+;                       ;                             ;
+; Max LUT depth         ; 13.90                       ;
+; Average LUT depth     ; 10.38                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu May 14 03:21:06 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Game
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file gen25mhz.vhd
+    Info (12022): Found design unit 1: Gen25MHz-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 12
+    Info (12023): Found entity 1: Gen25MHz File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 46
+    Info (12023): Found entity 1: hw_image_generator File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
+    Info (12022): Found design unit 1: vga_controller-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 51
+    Info (12023): Found entity 1: vga_controller File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file game.vhd
+    Info (12022): Found design unit 1: Game-arc_Game File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 13
+    Info (12023): Found entity 1: Game File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file relojlento.vhd
+    Info (12022): Found design unit 1: RelojLento-arqrelojlento File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/RelojLento.vhd Line: 10
+    Info (12023): Found entity 1: RelojLento File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/RelojLento.vhd Line: 5
+Info (12127): Elaborating entity "Game" for the top level hierarchy
+Info (12129): Elaborating entity "Gen25MHz" using architecture "A:behavior" for hierarchy "Gen25MHz:U1" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 23
+Info (12129): Elaborating entity "vga_controller" using architecture "A:behavior" for hierarchy "vga_controller:U2" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(47): used implicit default value for signal "n_blank" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 47
+Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(48): used implicit default value for signal "n_sync" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 48
+Info (12129): Elaborating entity "hw_image_generator" using architecture "A:behavior" for hierarchy "hw_image_generator:U3" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at hw_image_generator.vhd(56): object "rein" assigned a value but never read File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 56
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "red", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "green", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "blue", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "blue[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "blue[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "blue[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "blue[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "green[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "green[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "green[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "green[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "red[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "red[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "red[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (10041): Inferred latch for "red[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Info (12129): Elaborating entity "RelojLento" using architecture "A:arqrelojlento" for hierarchy "RelojLento:U4" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 26
+Warning (12161): Node "Gen25MHz:U1|VGA_clk" is stuck at GND because node is in wire loop and does not have a source File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 7
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "VGA_clk" and its non-tri-state driver. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 8
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[3]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[2]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[1]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[3]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[2]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[1]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[3]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[2]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[1]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "VGA_clk~synth" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "n_blank" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 9
+    Warning (13410): Pin "n_sync" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register vga_controller:U2|column[31] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+    Critical Warning (18010): Register vga_controller:U2|column[0] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+    Critical Warning (18010): Register vga_controller:U2|row[0] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+    Critical Warning (18010): Register vga_controller:U2|row[31] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2748 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 2726 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Thu May 14 03:21:29 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:46
+
+

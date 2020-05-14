@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Game is
+	port (clk50MHz, reset_n: in std_logic; 
+	red, green, blue: out std_logic_vector(3 downto 0); 
+	v_sync, h_sync: out std_logic);
+end entity;
+
+architecture Arc_Game of Game is
+signal cable1, cable2: std_logic;
+signal cable3, cable4: INTEGER;
+begin
+	u1:entity work.Gen25MHz(behavior) port map (clk50MHz, cable1);
+	u2:entity work.vga_controller(behavior) port map (cable1, reset_n, h_sync, v_sync, cable2, cable3, cable4);
+	u3:entity work.hw_image_generator(behavior) port map (cable2, cable3, cable4, red, green, blue);
+end architecture;
