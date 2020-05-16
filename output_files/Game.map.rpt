@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Game
-Thu May 14 03:21:29 2020
+Fri May 15 16:04:16 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,16 +49,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 14 03:21:29 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 15 16:04:16 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Game                                        ;
 ; Top-level Entity Name              ; Game                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,705                                       ;
-;     Total combinational functions  ; 2,686                                       ;
-;     Dedicated logic registers      ; 173                                         ;
-; Total registers                    ; 173                                         ;
-; Total pins                         ; 22                                          ;
+; Total logic elements               ; 4,979                                       ;
+;     Total combinational functions  ; 4,960                                       ;
+;     Dedicated logic registers      ; 220                                         ;
+; Total registers                    ; 220                                         ;
+; Total pins                         ; 67                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,7 +162,7 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -170,10 +170,10 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -190,36 +190,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 2,705             ;
-;                                             ;                   ;
-; Total combinational functions               ; 2686              ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 575               ;
-;     -- 3 input functions                    ; 565               ;
-;     -- <=2 input functions                  ; 1546              ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 859               ;
-;     -- arithmetic mode                      ; 1827              ;
-;                                             ;                   ;
-; Total registers                             ; 173               ;
-;     -- Dedicated logic registers            ; 173               ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 22                ;
-;                                             ;                   ;
-; Embedded Multiplier 9-bit elements          ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; RelojLento:U4|led ;
-; Maximum fan-out                             ; 105               ;
-; Total fan-out                               ; 7517              ;
-; Average fan-out                             ; 2.59              ;
-+---------------------------------------------+-------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 4,979                       ;
+;                                             ;                             ;
+; Total combinational functions               ; 4960                        ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 1077                        ;
+;     -- 3 input functions                    ; 1065                        ;
+;     -- <=2 input functions                  ; 2818                        ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 1571                        ;
+;     -- arithmetic mode                      ; 3389                        ;
+;                                             ;                             ;
+; Total registers                             ; 220                         ;
+;     -- Dedicated logic registers            ; 220                         ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 67                          ;
+;                                             ;                             ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; vga_controller:U2|column[6] ;
+; Maximum fan-out                             ; 120                         ;
+; Total fan-out                               ; 13687                       ;
+; Average fan-out                             ; 2.58                        ;
++---------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -227,34 +227,35 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name         ; Entity Name        ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
-; |Game                      ; 2686 (0)            ; 173 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |Game                       ; Game               ; work         ;
+; |Game                      ; 4960 (0)            ; 220 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 67   ; 0            ; 0          ; |Game                       ; Game               ; work         ;
 ;    |Gen25MHz:U1|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|Gen25MHz:U1           ; Gen25MHz           ; work         ;
 ;    |RelojLento:U4|         ; 49 (49)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|RelojLento:U4         ; RelojLento         ; work         ;
-;    |hw_image_generator:U3| ; 2579 (2579)         ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|hw_image_generator:U3 ; hw_image_generator ; work         ;
+;    |hw_image_generator:U3| ; 4853 (4853)         ; 151 (151)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|hw_image_generator:U3 ; hw_image_generator ; work         ;
 ;    |vga_controller:U2|     ; 57 (57)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Game|vga_controller:U2     ; vga_controller     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; hw_image_generator:U3|red[0]                        ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|red[1]                        ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|red[2]                        ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|red[3]                        ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|green[0]                      ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|green[1]                      ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|green[2]                      ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|green[3]                      ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|blue[0]                       ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|blue[1]                       ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|blue[2]                       ; vga_controller:U2|disp_ena ; yes                    ;
-; hw_image_generator:U3|blue[3]                       ; vga_controller:U2|disp_ena ; yes                    ;
-; Number of user-specified and inferred latches = 12  ;                            ;                        ;
-+-----------------------------------------------------+----------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; hw_image_generator:U3|red[0]                        ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|red[1]                        ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|red[2]                        ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|red[3]                        ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|green[0]                      ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|green[1]                      ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|green[2]                      ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|green[3]                      ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|blue[0]                       ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|blue[1]                       ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|blue[2]                       ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|blue[3]                       ; vga_controller:U2|disp_ena    ; yes                    ;
+; hw_image_generator:U3|segundo                       ; hw_image_generator:U3|divisor ; yes                    ;
+; Number of user-specified and inferred latches = 13  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -274,11 +275,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; hw_image_generator:U3|s[8,9,11..31]     ; Merged with hw_image_generator:U3|s[10] ;
 ; hw_image_generator:U3|s[6]              ; Merged with hw_image_generator:U3|s[3]  ;
 ; hw_image_generator:U3|w[1]              ; Merged with hw_image_generator:U3|w[0]  ;
-; hw_image_generator:U3|w[0]              ; Stuck at GND due to stuck port data_in  ;
 ; vga_controller:U2|row[9]                ; Stuck at GND due to stuck port data_in  ;
 ; hw_image_generator:U3|s[4]              ; Merged with hw_image_generator:U3|s[3]  ;
-; vga_controller:U2|column[31]            ; Stuck at GND due to stuck port data_in  ;
+; hw_image_generator:U3|w[0]              ; Stuck at GND due to stuck port data_in  ;
 ; vga_controller:U2|row[31]               ; Stuck at GND due to stuck port data_in  ;
+; vga_controller:U2|column[31]            ; Stuck at GND due to stuck port data_in  ;
 ; Total Number of Removed Registers = 105 ;                                         ;
 +-----------------------------------------+-----------------------------------------+
 
@@ -288,12 +289,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 173   ;
+; Total registers                              ; 220   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 55    ;
+; Number of registers using Clock Enable       ; 47    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -303,61 +304,61 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; hw_image_generator:U3|y[8]              ; 11      ;
-; hw_image_generator:U3|y[5]              ; 13      ;
-; hw_image_generator:U3|y[2]              ; 13      ;
-; hw_image_generator:U3|y[1]              ; 13      ;
-; hw_image_generator:U3|y[0]              ; 13      ;
-; hw_image_generator:U3|z[0]              ; 43      ;
-; hw_image_generator:U3|z[31]             ; 41      ;
-; hw_image_generator:U3|s[10]             ; 5       ;
-; hw_image_generator:U3|s[7]              ; 5       ;
-; hw_image_generator:U3|s[3]              ; 10      ;
-; hw_image_generator:U3|s[5]              ; 2       ;
-; hw_image_generator:U3|s[2]              ; 4       ;
-; hw_image_generator:U3|w[10]             ; 4       ;
-; hw_image_generator:U3|w[11]             ; 4       ;
-; hw_image_generator:U3|w[12]             ; 4       ;
-; hw_image_generator:U3|w[13]             ; 4       ;
-; hw_image_generator:U3|w[14]             ; 4       ;
-; hw_image_generator:U3|w[15]             ; 4       ;
-; hw_image_generator:U3|w[16]             ; 4       ;
-; hw_image_generator:U3|w[17]             ; 4       ;
-; hw_image_generator:U3|w[18]             ; 4       ;
-; hw_image_generator:U3|w[19]             ; 4       ;
-; hw_image_generator:U3|w[20]             ; 4       ;
-; hw_image_generator:U3|w[21]             ; 4       ;
-; hw_image_generator:U3|w[22]             ; 4       ;
-; hw_image_generator:U3|w[23]             ; 4       ;
-; hw_image_generator:U3|w[24]             ; 4       ;
-; hw_image_generator:U3|w[25]             ; 4       ;
-; hw_image_generator:U3|w[30]             ; 4       ;
-; hw_image_generator:U3|w[26]             ; 4       ;
-; hw_image_generator:U3|w[27]             ; 4       ;
-; hw_image_generator:U3|w[28]             ; 4       ;
-; hw_image_generator:U3|w[29]             ; 4       ;
-; hw_image_generator:U3|w[9]              ; 7       ;
-; hw_image_generator:U3|w[8]              ; 7       ;
-; hw_image_generator:U3|w[7]              ; 8       ;
-; hw_image_generator:U3|w[6]              ; 5       ;
-; hw_image_generator:U3|w[5]              ; 6       ;
-; hw_image_generator:U3|w[3]              ; 6       ;
-; hw_image_generator:U3|w[2]              ; 6       ;
-; hw_image_generator:U3|w[31]             ; 11      ;
-; hw_image_generator:U3|ban2              ; 4       ;
+; hw_image_generator:U3|y[8]              ; 16      ;
+; hw_image_generator:U3|y[5]              ; 17      ;
+; hw_image_generator:U3|y[2]              ; 17      ;
+; hw_image_generator:U3|y[1]              ; 18      ;
+; hw_image_generator:U3|y[0]              ; 19      ;
+; hw_image_generator:U3|w[12]             ; 14      ;
+; hw_image_generator:U3|w[11]             ; 14      ;
+; hw_image_generator:U3|w[10]             ; 14      ;
+; hw_image_generator:U3|w[9]              ; 19      ;
+; hw_image_generator:U3|w[8]              ; 19      ;
+; hw_image_generator:U3|w[7]              ; 19      ;
+; hw_image_generator:U3|w[6]              ; 16      ;
+; hw_image_generator:U3|w[5]              ; 18      ;
+; hw_image_generator:U3|w[3]              ; 18      ;
+; hw_image_generator:U3|w[2]              ; 19      ;
+; hw_image_generator:U3|w[13]             ; 14      ;
+; hw_image_generator:U3|w[14]             ; 14      ;
+; hw_image_generator:U3|w[15]             ; 14      ;
+; hw_image_generator:U3|w[31]             ; 22      ;
+; hw_image_generator:U3|w[30]             ; 14      ;
+; hw_image_generator:U3|w[29]             ; 14      ;
+; hw_image_generator:U3|w[28]             ; 14      ;
+; hw_image_generator:U3|w[27]             ; 14      ;
+; hw_image_generator:U3|w[26]             ; 14      ;
+; hw_image_generator:U3|w[25]             ; 14      ;
+; hw_image_generator:U3|w[24]             ; 14      ;
+; hw_image_generator:U3|w[23]             ; 14      ;
+; hw_image_generator:U3|w[22]             ; 15      ;
+; hw_image_generator:U3|w[21]             ; 16      ;
+; hw_image_generator:U3|w[20]             ; 14      ;
+; hw_image_generator:U3|w[19]             ; 14      ;
+; hw_image_generator:U3|w[18]             ; 14      ;
+; hw_image_generator:U3|w[17]             ; 14      ;
+; hw_image_generator:U3|w[16]             ; 14      ;
+; hw_image_generator:U3|s[10]             ; 15      ;
+; hw_image_generator:U3|s[7]              ; 14      ;
+; hw_image_generator:U3|s[3]              ; 36      ;
+; hw_image_generator:U3|s[5]              ; 22      ;
+; hw_image_generator:U3|s[2]              ; 19      ;
+; hw_image_generator:U3|ban2              ; 9       ;
+; hw_image_generator:U3|z[0]              ; 90      ;
+; hw_image_generator:U3|z[31]             ; 62      ;
 ; Total number of inverted registers = 42 ;         ;
 +-----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |Game|hw_image_generator:U3|n[1]  ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |Game|hw_image_generator:U3|w[23] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|vga_controller:U2|v_count   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |Game|hw_image_generator:U3|n[1] ;
+; 6:1                ; 29 bits   ; 116 LEs       ; 29 LEs               ; 87 LEs                 ; Yes        ; |Game|hw_image_generator:U3|w[5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Game|vga_controller:U2|v_count  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -404,26 +405,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 173                         ;
+; boundary_port         ; 67                          ;
+; cycloneiii_ff         ; 220                         ;
 ;     CLR               ; 23                          ;
-;     ENA               ; 36                          ;
+;     ENA               ; 28                          ;
 ;     ENA CLR           ; 19                          ;
-;     plain             ; 95                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 149                         ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 2687                        ;
-;     arith             ; 1827                        ;
-;         2 data inputs ; 1324                        ;
-;         3 data inputs ; 503                         ;
-;     normal            ; 860                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 51                          ;
-;         2 data inputs ; 171                         ;
-;         3 data inputs ; 62                          ;
-;         4 data inputs ; 575                         ;
+; cycloneiii_lcell_comb ; 4966                        ;
+;     arith             ; 3389                        ;
+;         2 data inputs ; 2459                        ;
+;         3 data inputs ; 930                         ;
+;     normal            ; 1577                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 98                          ;
+;         2 data inputs ; 265                         ;
+;         3 data inputs ; 135                         ;
+;         4 data inputs ; 1077                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.90                       ;
-; Average LUT depth     ; 10.38                       ;
+; Max LUT depth         ; 16.20                       ;
+; Average LUT depth     ; 12.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -432,7 +434,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -442,7 +444,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 14 03:21:06 2020
+    Info: Processing started: Fri May 15 16:03:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -450,76 +452,111 @@ Info (12021): Found 2 design units, including 1 entities, in source file gen25mh
     Info (12022): Found design unit 1: Gen25MHz-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 12
     Info (12023): Found entity 1: Gen25MHz File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
-    Info (12022): Found design unit 1: hw_image_generator-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 46
-    Info (12023): Found entity 1: hw_image_generator File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 25
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 49
+    Info (12023): Found entity 1: hw_image_generator File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
     Info (12022): Found design unit 1: vga_controller-behavior File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 51
     Info (12023): Found entity 1: vga_controller File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file game.vhd
-    Info (12022): Found design unit 1: Game-arc_Game File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 13
+    Info (12022): Found design unit 1: Game-arc_Game File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 15
     Info (12023): Found entity 1: Game File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file relojlento.vhd
     Info (12022): Found design unit 1: RelojLento-arqrelojlento File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/RelojLento.vhd Line: 10
     Info (12023): Found entity 1: RelojLento File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/RelojLento.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file score.vhd
+    Info (12022): Found design unit 1: Score-arc_Score File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Score.vhd Line: 11
+    Info (12023): Found entity 1: Score File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Score.vhd Line: 6
 Info (12127): Elaborating entity "Game" for the top level hierarchy
-Info (12129): Elaborating entity "Gen25MHz" using architecture "A:behavior" for hierarchy "Gen25MHz:U1" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 23
-Info (12129): Elaborating entity "vga_controller" using architecture "A:behavior" for hierarchy "vga_controller:U2" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 24
+Info (12129): Elaborating entity "Gen25MHz" using architecture "A:behavior" for hierarchy "Gen25MHz:U1" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 25
+Info (12129): Elaborating entity "vga_controller" using architecture "A:behavior" for hierarchy "vga_controller:U2" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 26
 Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(47): used implicit default value for signal "n_blank" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 47
 Warning (10541): VHDL Signal Declaration warning at vga_controller.vhd(48): used implicit default value for signal "n_sync" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 48
-Info (12129): Elaborating entity "hw_image_generator" using architecture "A:behavior" for hierarchy "hw_image_generator:U3" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at hw_image_generator.vhd(56): object "rein" assigned a value but never read File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "red", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "green", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(61): inferring latch(es) for signal or variable "blue", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "blue[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "blue[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "blue[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "blue[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "green[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "green[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "green[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "green[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "red[0]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "red[1]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "red[2]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (10041): Inferred latch for "red[3]" at hw_image_generator.vhd(61) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-Info (12129): Elaborating entity "RelojLento" using architecture "A:arqrelojlento" for hierarchy "RelojLento:U4" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 26
+Info (12129): Elaborating entity "hw_image_generator" using architecture "A:behavior" for hierarchy "hw_image_generator:U3" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 27
+Warning (10036): Verilog HDL or VHDL warning at hw_image_generator.vhd(59): object "rein" assigned a value but never read File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at hw_image_generator.vhd(68): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 68
+Warning (10541): VHDL Signal Declaration warning at hw_image_generator.vhd(75): used implicit default value for signal "v" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 75
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(92): inferring latch(es) for signal or variable "red", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(92): inferring latch(es) for signal or variable "green", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(92): inferring latch(es) for signal or variable "blue", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(808): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 808
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(805): inferring latch(es) for signal or variable "segundo", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 805
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(891): inferring latch(es) for signal or variable "cuenta", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 891
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(911): inferring latch(es) for signal or variable "cuenta", which holds its previous value in one or more paths through the process File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 911
+Info (10041): Inferred latch for "Hora_Decenas:cuenta[0]" at hw_image_generator.vhd(921) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 921
+Info (10041): Inferred latch for "Hora_Decenas:cuenta[1]" at hw_image_generator.vhd(921) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 921
+Info (10041): Inferred latch for "Hora_Decenas:cuenta[2]" at hw_image_generator.vhd(921) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 921
+Info (10041): Inferred latch for "Hora_Decenas:cuenta[3]" at hw_image_generator.vhd(921) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 921
+Info (10041): Inferred latch for "Hora_Unidades:cuenta[0]" at hw_image_generator.vhd(903) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 903
+Info (10041): Inferred latch for "Hora_Unidades:cuenta[1]" at hw_image_generator.vhd(903) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 903
+Info (10041): Inferred latch for "Hora_Unidades:cuenta[2]" at hw_image_generator.vhd(903) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 903
+Info (10041): Inferred latch for "Hora_Unidades:cuenta[3]" at hw_image_generator.vhd(903) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 903
+Info (10041): Inferred latch for "segundo" at hw_image_generator.vhd(805) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 805
+Info (10041): Inferred latch for "blue[0]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "blue[1]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "blue[2]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "blue[3]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "green[0]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "green[1]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "green[2]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "green[3]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "red[0]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "red[1]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "red[2]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (10041): Inferred latch for "red[3]" at hw_image_generator.vhd(92) File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+Info (12129): Elaborating entity "RelojLento" using architecture "A:arqrelojlento" for hierarchy "RelojLento:U4" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 28
 Warning (12161): Node "Gen25MHz:U1|VGA_clk" is stuck at GND because node is in wire loop and does not have a source File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Gen25Mhz.vhd Line: 7
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "VGA_clk" and its non-tri-state driver. File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 8
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[3]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[2]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[1]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[3]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[2]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[1]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[3]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[2]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
-    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[1]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 61
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[3]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[2]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|red[1]" merged with LATCH primitive "hw_image_generator:U3|red[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[3]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[2]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|green[1]" merged with LATCH primitive "hw_image_generator:U3|green[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[3]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[2]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
+    Info (13026): Duplicate LATCH primitive "hw_image_generator:U3|blue[1]" merged with LATCH primitive "hw_image_generator:U3|blue[0]" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/hw_image_generator.vhd Line: 92
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "VGA_clk~synth" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "n_blank" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 9
     Warning (13410): Pin "n_sync" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 9
+    Warning (13410): Pin "L5[0]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[1]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[2]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[3]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[4]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[5]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L5[6]" is stuck at VCC File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[0]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[1]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[2]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[3]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[4]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[5]" is stuck at GND File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
+    Warning (13410): Pin "L6[6]" is stuck at VCC File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register vga_controller:U2|column[31] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
     Critical Warning (18010): Register vga_controller:U2|column[0] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
-    Critical Warning (18010): Register vga_controller:U2|row[0] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
     Critical Warning (18010): Register vga_controller:U2|row[31] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+    Critical Warning (18010): Register vga_controller:U2|row[0] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
+    Critical Warning (18010): Register vga_controller:U2|column[31] will power up to Low File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/vga_controller.vhd Line: 64
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2748 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 16 output pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset_total" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 5
+    Warning (15610): No output dependent on input pin "reloj" File: D:/UNAM/FI IC/8o Semstre/Diseño Digital VLSI/Proyectos/ProyectoFinalGame/Game.vhd Line: 10
+Info (21057): Implemented 5066 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 58 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 2726 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Thu May 14 03:21:29 2020
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:46
+    Info (21061): Implemented 4999 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Fri May 15 16:04:16 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:49
 
 

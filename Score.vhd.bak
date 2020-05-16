@@ -1,0 +1,156 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Score is
+	port (reloj: in std_logic;
+			L1, L2, L3, L4: out std_logic_vector (6 downto 0));
+end entity;
+
+architecture arc_Score of Score is
+	signal segundo: std_logic;
+	signal n: std_logic;
+	signal Qs: std_logic_vector(3 downto 0);
+	signal QUS: std_logic_vector(3 downto 0);
+	signal QDS: std_logic_vector(3 downto 0);
+	signal e: std_logic;
+	signal Qr: std_logic_vector(1 downto 0);
+	signal QUM: std_logic_vector(3 downto 0);
+	signal QDM: std_logic_vector(3 downto 0);
+	signal z: std_logic;
+	signal u: std_logic;
+	signal d: std_logic;
+	signal reset: std_logic;
+	
+begin 
+	divisor: process (reloj)
+		variable cuenta: std_logic_vector(27 downto 0) := X"48009E0";
+	begin
+		if rising_edge (reloj) then
+			if cuenta = X"0000000" then
+				cuenta:= X"48009E0";
+			else
+				cuenta:= cuenta - 1;
+			end if;
+		end if;
+		segundo <= cuenta(24);
+	end process;
+	
+Segundo_Unidades: process (segundo)
+variable cuenta: std_logic_vector(3 downto 0) := "1001";
+begin
+	if rising_edge (segundo) then
+		if cuenta = "0000" then
+			cuenta := "1001";
+			n <= '1';
+		else
+			cuenta := cuenta -1;
+			n <= '0';
+		end if;
+	end if;
+	QUS <= cuenta;
+end process;
+	
+	
+Segundo_Decenas: process (n)
+variable cuenta: std_logic_vector(3 downto 0) := "0101";
+begin
+	if rising_edge(n) then
+		if cuenta = "0000" then
+			cuenta := "0101";
+			e <= '1';
+		else 
+			cuenta := cuenta -1;
+			e<= '0';
+		end if;
+	end if;
+	QDS <= cuenta;
+end process;
+
+Minuto_Unidades: Process(E, reset)
+variable cuenta: std_logic_vector(3 downto 0) := "1001";
+begin
+	if rising_edge(E) then
+		if cuenta = "0000" then 
+			cuenta := "1001";
+			z <= '1';
+		else
+			cuenta := cuenta -1;
+			z <= '0';
+		end if;
+	end if;
+	if reset = '1' then
+		cuenta := "1001";
+	end if;
+	QUM <= cuenta;
+	U <= cuenta(2);
+end Process;
+
+Minuto_Decenas: Process(Z, reset)
+variable cuenta: std_logic_vector(3 downto 0) := "0101";
+begin
+	if rising_edge(Z) then
+		if cuenta = "0000" then
+			cuenta := "0101";
+		else
+			cuenta := cuenta - 1;
+		end if;
+	end if;
+	if reset = '1' then
+		cuenta := "0101";
+	end if;
+	QDM<= cuenta;
+	D <= cuenta(1);
+end Process;	
+	
+inicia: process (U,D)
+begin
+	reset <= (U and D);
+end process;
+	
+	with   QDM SELECT       
+		L1 <= "1000000" when "0000",   --0            
+				"1111001" when "0001",   --1           
+				"0100100" when "0010",   --2            
+				"0110000" when "0011",   --3            
+				"0011001" when "0100",   --4            
+				"0010010" when "0101",   --5                    
+				"1000000" when others;   --0 
+				
+	with   QUM SELECT       
+		L2 <= "1000000" when "0000",   --0            
+				"1111001" when "0001",   --1           
+				"0100100" when "0010",   --2            
+				"0110000" when "0011",   --3            
+				"0011001" when "0100",   --4            
+				"0010010" when "0101",   --5           
+				"0000010" when "0110",   --6            
+				"1111000" when "0111",   --7           
+				"0000000" when "1000",   --8            
+				"0010000" when "1001",   --9                    
+				"1000000" when others;   --0
+				
+	with   QDS SELECT       
+		L3 <= "1000000" when "0000",   --0            
+				"1111001" when "0001",   --1           
+				"0100100" when "0010",   --2            
+				"0110000" when "0011",   --3            
+				"0011001" when "0100",   --4            
+				"0010010" when "0101",   --5                   
+				"1000000" when others;   --0
+				
+	with   QUS SELECT       
+		L4 <= "1000000" when "0000",   --0            
+				"1111001" when "0001",   --1           
+				"0100100" when "0010",   --2            
+				"0110000" when "0011",   --3            
+				"0011001" when "0100",   --4            
+				"0010010" when "0101",   --5           
+				"0000010" when "0110",   --6            
+				"1111000" when "0111",   --7           
+				"0000000" when "1000",   --8            
+				"0010000" when "1001",   --9                    
+				"1000000" when others;   --0
+
+end architecture;

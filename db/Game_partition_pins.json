@@ -60,6 +60,118 @@
 					"strict" : false
 				},
 				{
+					"name" : "L1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "L1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "L2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "L3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "L4[6]",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_clk",
 					"strict" : false
 				},
@@ -81,6 +193,10 @@
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reloj2",
 					"strict" : false
 				}
 			]
